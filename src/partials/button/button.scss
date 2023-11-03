@@ -1,0 +1,27 @@
+.button {
+  cursor: pointer;
+  box-sizing: border-box;
+
+  width: 100%;
+  margin: 0 0;
+  padding: 8px 16px;
+
+  border-radius: 8px;
+  border: none;
+}
+
+.button-blue {
+  background: #3369f3;
+}
+
+.button-white {
+  background: #ffffff;
+}
+
+.button-text-blue {
+  color: #3369f3;
+}
+
+.button-text-white {
+  color: #ffffff;
+}

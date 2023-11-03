@@ -1,0 +1,17 @@
+.profile-input-field {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #EAEAEA;
+  padding: 1rem 0;
+}
+
+.input-field {
+  text-align: end;
+  width: auto;
+  color: #999999;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}

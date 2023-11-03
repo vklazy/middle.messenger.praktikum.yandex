@@ -1,0 +1,170 @@
+.chat-page {
+  font: inherit;
+  display: grid;
+  grid-template-columns: 20rem 1fr;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.left-panel {
+  background: #FBFBFB;
+  padding: 0 1rem;
+  border-right: 1px solid #EAEAEA;
+}
+
+a {
+  text-decoration: none;
+  text-transform: none;
+}
+
+.profile-link {
+  display: flex;
+  font-size: 0.8rem;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 0;
+  color: #999999;
+}
+
+.left-panel-top {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.search {
+  background: #EFEFEF;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  width: 100%;
+  outline: none;
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.dialog-wrapper {
+  background: #ffffff;
+  padding: 0 1rem;
+}
+
+.dialog {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 5rem 1fr 5rem;
+}
+
+.dialog-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.dialog-head-user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-head-user-info-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #EFEFEF;
+}
+
+.dialog-head-user-info-name {
+  margin-left: 1rem;
+}
+
+.dialog-head-user-btn {
+  font-size: 1.8rem;
+}
+
+.dialog-main {
+  padding: 1rem 0;
+}
+
+.dialog-main-messages {
+  display: flex;
+  height: 100%;
+  padding: 1rem 0;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+
+.dialog-main-messages-date {
+  color: #999999;
+  text-align: center;
+}
+
+.dialog-footer {
+  display: grid;
+  grid-template-columns: 3rem 1fr 3rem;
+  padding: 1rem 0;
+  border-top: 1px solid #EAEAEA;
+  align-items: center;
+}
+
+.dialog-footer-button {
+  display: flex;
+  justify-content: center;
+}
+
+.button-paperclip {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #999999;
+}
+
+.button-send {
+  background: #3369f3;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.button-paperclip {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #999999;
+}
+
+.dialog-footer-input {
+  width: 100%;
+}
+
+.input-message {
+  height: 2rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 1.2rem;
+  background: #EFEFEF;
+  box-sizing: border-box;
+}

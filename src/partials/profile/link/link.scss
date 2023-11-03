@@ -1,0 +1,24 @@
+.profile-button {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.border-b {
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.text-blue {
+  color: #3369f3;
+}
+
+.text-red {
+  color: #ff0000;
+}
+
+a {
+  text-transform: none;
+  text-decoration: none;
+}

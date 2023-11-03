@@ -1,0 +1,54 @@
+{{#> layouts/page title="Чат"}}
+  <div class="chat-page">
+    <div class="left-panel">
+      <div class="left-panel-top">
+        <a href="/src/pages/profile/view/view.html">
+          <div class="profile-link">Профиль<span class="mdi mdi-chevron-right"></span></div>
+        </a>
+        <div class="search">
+          <span class="mdi mdi-magnify"></span>
+          <input class="input-search" name="search" placeholder="Поиск">
+        </div>
+      </div>
+      {{> contact/card/card name="Андрей" message="Друзья, у меня для вас особенный выпуск новостей!..." date="12:10" new_message="2"}}
+      {{> contact/card/card name="1, 2, 3" message="Миллионы россиян ежедневно проводят десятки часов свое..." date="Пн" new_message="4"}}
+    </div>
+    <div class="dialog-wrapper">
+      <div class="dialog">
+        <div class="dialog-head">
+          <div class="dialog-head-user-info">
+            <div class="dialog-head-user-info-avatar"></div>
+            <div class="dialog-head-user-info-name">Андрей</div>
+          </div>
+          <div class="dialog-head-user-btn"><span class="mdi mdi-dots-vertical"></span></div>
+        </div>
+        <div class="dialog-main">
+          <div class="dialog-main-messages">
+            <div class="dialog-main-messages-date">19 июня</div>
+            {{> dialog/message/message direction-from=true message="Привет! Смотри, тут всплыл интересный кусок лунной
+            космической истории — НАСА в какой-то момент попросила Хассельблад адаптировать модель SWC для полетов на Луну.
+            Сейчас мы все знаем что астронавты летали с моделью 500 EL — и к слову говоря, все тушки этих камер все еще
+            находятся на поверхности Луны, так как астронавты с собой забрали только кассеты с пленкой." date="11:56"}}
+            {{> dialog/message/message direction-from=true message="Хассельблад в итоге адаптировал SWC для космоса,
+            но что-то пошло не так и на ракету они так никогда и не попали.
+            Всего их было произведено 25 штук, одну из них недавно продали на аукционе за 45000 евро." date="11:57"}}
+            {{> dialog/message/message direction-from=false message="Круто!" date="12:00"}}
+          </div>
+        </div>
+        <div class="dialog-footer">
+          <div class="dialog-footer-button">
+            <button class="button-paperclip"><span class="mdi mdi-paperclip"></span></button>
+          </div>
+          <div class="dialog-footer-input">
+            <input class="input-message" type="text" name="message" placeholder="Сообщение">
+          </div>
+          <div class="dialog-footer-button">
+            <a href="/src/pages/errors/500.html">
+              <button class="button-send"><span class="mdi mdi-arrow-right"></span></button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/ layouts/page}}
