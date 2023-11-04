@@ -2,13 +2,15 @@
   <div class="chat-page">
     <div class="left-panel">
       <div class="left-panel-top">
-        <a href="/src/pages/profile/view/view.html">
+        <a class="a-profile" href="/src/pages/profile/view/view.html">
           <div class="profile-link">Профиль<span class="mdi mdi-chevron-right"></span></div>
         </a>
-        <div class="search">
-          <span class="mdi mdi-magnify"></span>
-          <input class="input-search" name="search" placeholder="Поиск">
-        </div>
+        {{#> layouts/form/form form_class="form-chat-search"}}
+          <div class="search">
+            <span class="mdi mdi-magnify"></span>
+            <input class="input-search" name="search" placeholder="Поиск">
+          </div>
+        {{/ layouts/form/form}}
       </div>
       {{> contact/card/card name="Андрей" message="Друзья, у меня для вас особенный выпуск новостей!..." date="12:10" new_message="2"}}
       {{> contact/card/card name="1, 2, 3" message="Миллионы россиян ежедневно проводят десятки часов свое..." date="Пн" new_message="4"}}
@@ -35,19 +37,19 @@
             {{> dialog/message/message direction-from=false message="Круто!" date="12:00"}}
           </div>
         </div>
-        <div class="dialog-footer">
-          <div class="dialog-footer-button">
-            <button class="button-paperclip"><span class="mdi mdi-paperclip"></span></button>
+        {{#> layouts/form/form form_class="form-send-message"}}
+          <div class="dialog-footer">
+            <div class="dialog-footer-button">
+              <button class="button-paperclip"><span class="mdi mdi-paperclip"></span></button>
+            </div>
+            <div class="dialog-footer-input">
+              <input class="input-message" type="text" name="message" placeholder="Сообщение">
+            </div>
+            <div class="dialog-footer-button">
+              <button class="button-send" type="submit"><span class="mdi mdi-arrow-right"></span></button>
+            </div>
           </div>
-          <div class="dialog-footer-input">
-            <input class="input-message" type="text" name="message" placeholder="Сообщение">
-          </div>
-          <div class="dialog-footer-button">
-            <a href="/src/pages/errors/500.html">
-              <button class="button-send"><span class="mdi mdi-arrow-right"></span></button>
-            </a>
-          </div>
-        </div>
+        {{/ layouts/form/form}}
       </div>
     </div>
   </div>

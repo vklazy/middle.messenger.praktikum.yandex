@@ -2,14 +2,14 @@
   display: grid;
   grid-template-columns: 15% 75% 10%;
   padding: 0.5rem 0;
-  border-bottom: 1px solid #EAEAEA;
+  border-bottom: 1px solid $color-light-grey;
 }
 
 .contact_avatar {
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background: #EFEFEF;
+  background: $color-light-light-gray;
 }
 
 .contact_data {
@@ -21,12 +21,12 @@
 
 .contact_name {
   font-weight: 500;
-  color: #1e1e1e;
+  color: $color-almost-black;
 }
 
 .contact_message {
   font-size: 0.8rem;
-  color: #999999;
+  color: $color-grey;
   font-weight: 400;
 }
 
@@ -40,7 +40,7 @@
 .contact_message_date {
   display: flex;
   font-size: 0.6rem;
-  color: #999999;
+  color: $color-grey;
   font-weight: 400;
   justify-content: right;
 }
@@ -58,7 +58,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  background: #3369f3;
+  background: $color-blue;
   font-size: 0.8rem;
-  color: #ffffff;
+  color: $color-white;
 }

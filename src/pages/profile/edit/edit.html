@@ -13,19 +13,21 @@
         <span class="mdi mdi-account-circle"></span>
       </div>
     </div>
-    <div class="profile-items">
-      {{> profile/input/input label="Почта" type="email" name="email" placeholder="почта" value="pochta@yandex.ru"}}
-      {{> profile/input/input label="Логин" type="text" name="login" placeholder="логин" value="ivanivanov"}}
-      {{> profile/input/input label="Имя" type="text" name="first_name" placeholder="имя" value="Иван"}}
-      {{> profile/input/input label="Фамилия" type="text" name="second_name" placeholder="фамилия" value="Иванов"}}
-      {{> profile/input/input label="Имя в чате" type="text" name="display_name" placeholder="имя в чате" value="Иван"}}
-      {{> profile/input/input label="Телефон" type="text" name="phone" placeholder="телефон" value="+7 (909) 967 30 30"}}
-    </div>
-    <div class="profile-items">
-      <div class="profile-button-save">
-        {{> button/button label="Сохранить" button_type="button-blue button-text-white"}}
+    {{#> layouts/form/form form_class="form-profile-edit"}}
+      <div class="profile-items">
+        {{> profile/input/input label="Почта" type="email" name="email" placeholder="почта" value="pochta@yandex.ru"}}
+        {{> profile/input/input label="Логин" type="text" name="login" placeholder="логин" value="ivanivanov"}}
+        {{> profile/input/input label="Имя" type="text" name="first_name" placeholder="имя" value="Иван"}}
+        {{> profile/input/input label="Фамилия" type="text" name="second_name" placeholder="фамилия" value="Иванов"}}
+        {{> profile/input/input label="Имя в чате" type="text" name="display_name" placeholder="имя в чате" value="Иван"}}
+        {{> profile/input/input label="Телефон" type="text" name="phone" placeholder="телефон" value="+7 (909) 967 30 30"}}
       </div>
-    </div>
+      <div class="profile-items">
+        <div class="profile-button-save">
+          {{> button/button label="Сохранить" button_type="button-blue button-text-white"}}
+        </div>
+      </div>
+    {{/ layouts/form/form}}
   </div>
 </div>
 {{/ layouts/page}}

@@ -15,7 +15,7 @@
 .dialog-message-content-from {
   position: relative;
   padding: 1.5rem;
-  background: #F8F8F8;
+  background: $color-message-from;
   border-radius: 0 1rem 1rem;
   max-width: 30rem;
 }
@@ -23,7 +23,7 @@
 .dialog-message-content-to {
   position: relative;
   padding: 1.5rem;
-  background: #E4EDFD;
+  background: $color-message-to;
   border-radius: 1rem 1rem 0;
   max-width: 30rem;
 }
@@ -32,7 +32,7 @@
   position: absolute;
   bottom: 0.5rem;
   right: 0.5rem;
-  color: #999999;
+  color: $color-grey;
   font-size: 0.6rem;
 }
 
@@ -40,6 +40,6 @@
   position: absolute;
   bottom: 0.5rem;
   right: 0.5rem;
-  color: #3369f3;
+  color: $color-blue;
   font-size: 0.6rem;
 }
