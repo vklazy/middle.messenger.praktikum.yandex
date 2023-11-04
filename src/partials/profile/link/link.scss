@@ -7,18 +7,18 @@
 }
 
 .border-b {
-  border-bottom: 1px solid #EAEAEA;
+  border-bottom: 1px solid $color-light-grey;
 }
 
 .text-blue {
-  color: #3369f3;
+  color: $color-blue;
 }
 
 .text-red {
-  color: #ff0000;
+  color: $color-red;
 }
 
-a {
+.a-profile-button {
   text-transform: none;
   text-decoration: none;
 }

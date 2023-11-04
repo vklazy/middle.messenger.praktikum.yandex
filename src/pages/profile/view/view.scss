@@ -9,12 +9,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #FBFBFB;
-  border-right: solid 1px #EAEAEA;
+  background: $color-almost-white;
+  border-right: solid 1px $color-light-grey;
 }
 
 .button-back {
-  background: #3369f3;
+  background: $color-blue;
   border-radius: 50%;
   height: 35px;
   width: 35px;
@@ -23,7 +23,7 @@
   margin: 0;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #ffffff;
+  color: $color-white;
 }
 
 .profile-wrapper {
@@ -51,8 +51,8 @@
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  background: #EFEFEF;
-  color: #CDCDCD;
+  background: $color-light-light-gray;
+  color: $color-grey;
   font-size: 5rem;
 }
 
@@ -67,7 +67,7 @@
   border-radius: 50%;
   transition: opacity 0.5s;
   opacity: 0;
-  background-color: #00000080;
+  background-color: $color-overlay;
 }
 
 .profile-avatar-text:hover {
@@ -76,7 +76,7 @@
 
 .avatar-text {
   text-align: center;
-  color: #ffffff;
+  color: $color-white;
 }
 
 .avatar-name {

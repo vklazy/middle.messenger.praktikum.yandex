@@ -10,12 +10,12 @@
 }
 
 .left-panel {
-  background: #FBFBFB;
+  background: $color-almost-white;
   padding: 0 1rem;
-  border-right: 1px solid #EAEAEA;
+  border-right: 1px solid $color-light-grey;
 }
 
-a {
+.a-profile {
   text-decoration: none;
   text-transform: none;
 }
@@ -27,16 +27,16 @@ a {
   justify-content: flex-end;
   align-items: center;
   padding: 1rem 0;
-  color: #999999;
+  color: $color-grey;
 }
 
 .left-panel-top {
   padding-bottom: 1rem;
-  border-bottom: 1px solid #EAEAEA;
+  border-bottom: 1px solid $color-light-grey;
 }
 
 .search {
-  background: #EFEFEF;
+  background: $color-light-light-gray;
   border-radius: 0.3rem;
   padding: 0.5rem;
   display: flex;
@@ -44,7 +44,7 @@ a {
   justify-content: center;
 }
 
-input {
+.input-search {
   width: 100%;
   outline: none;
   border: none;
@@ -54,7 +54,7 @@ input {
 }
 
 .dialog-wrapper {
-  background: #ffffff;
+  background: $color-white;
   padding: 0 1rem;
 }
 
@@ -69,7 +69,7 @@ input {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 0;
-  border-bottom: 1px solid #EAEAEA;
+  border-bottom: 1px solid $color-light-grey;
 }
 
 .dialog-head-user-info {
@@ -82,7 +82,7 @@ input {
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background: #EFEFEF;
+  background: $color-light-light-gray;
 }
 
 .dialog-head-user-info-name {
@@ -107,7 +107,7 @@ input {
 }
 
 .dialog-main-messages-date {
-  color: #999999;
+  color: $color-grey;
   text-align: center;
 }
 
@@ -115,7 +115,7 @@ input {
   display: grid;
   grid-template-columns: 3rem 1fr 3rem;
   padding: 1rem 0;
-  border-top: 1px solid #EAEAEA;
+  border-top: 1px solid $color-light-grey;
   align-items: center;
 }
 
@@ -131,11 +131,11 @@ input {
   margin: 0;
   font-size: 2rem;
   cursor: pointer;
-  color: #999999;
+  color: $color-grey;
 }
 
 .button-send {
-  background: #3369f3;
+  background: $color-blue;
   border-radius: 50%;
   height: 35px;
   width: 35px;
@@ -144,7 +144,7 @@ input {
   margin: 0;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #ffffff;
+  color: $color-white;
 }
 
 .button-paperclip {
@@ -154,7 +154,7 @@ input {
   margin: 0;
   font-size: 2rem;
   cursor: pointer;
-  color: #999999;
+  color: $color-grey;
 }
 
 .dialog-footer-input {
@@ -162,9 +162,12 @@ input {
 }
 
 .input-message {
+  outline: none;
+  border: none;
+  box-shadow: none;
   height: 2rem;
+  width: 100%;
   padding: 0.2rem 0.8rem;
   border-radius: 1.2rem;
-  background: #EFEFEF;
-  box-sizing: border-box;
+  background: $color-light-light-gray;
 }
