@@ -1,0 +1,22 @@
+{
+  "name": "chat",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "start": "vite build && node server.js",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "sass": "^1.69.5",
+    "vite": "^4.5.0",
+    "vite-plugin-handlebars": "^1.6.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

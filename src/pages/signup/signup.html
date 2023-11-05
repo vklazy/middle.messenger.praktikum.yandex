@@ -1,0 +1,24 @@
+{{#> layouts/page title="Регистрация"}}
+  <div class="signup-page">
+    {{#> layouts/card/card}}
+      <div class="form-title">Регистрация</div>
+      {{#> layouts/form/form form_class="form-signup"}}
+        {{> input/input type="email" name="email" placeholder="Почта"}}
+        {{> input/input type="text" name="login" placeholder="Логин"}}
+        {{> input/input type="text" name="first_name" placeholder="Имя"}}
+        {{> input/input type="text" name="second_name" placeholder="Фамилия"}}
+        {{> input/input type="text" name="phone" placeholder="Телефон"}}
+        {{> input/input type="password" name="password" placeholder="Пароль"}}
+        {{> input/input type="password" name="password_repeat" placeholder="Пароль (еще раз)"}}
+        <div class="form-buttons">
+          <a href="/src/pages/errors/404.html">
+            {{> button/button label="Зарегистрироваться" button_type="button-blue button-text-white"}}
+          </a>
+          <a href="/src/pages/chat/chat.html">
+            {{> button/button label="Войти"  button_type="button-white button-text-blue"}}
+          </a>
+        </div>
+      {{/ layouts/form/form}}
+    {{/ layouts/card/card}}
+  </div>
+{{/ layouts/page}}

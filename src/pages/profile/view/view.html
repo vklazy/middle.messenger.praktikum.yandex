@@ -1,0 +1,35 @@
+{{#> layouts/page title="Профиль"}}
+<div class="profile-page">
+  <div class="back-panel">
+    <div class="back-panel-button">
+      <a href="/src/pages/chat/chat.html">
+        <button class="button-back"><span class="mdi mdi-arrow-left"></span></button>
+      </a>
+    </div>
+  </div>
+  <div class="profile-wrapper">
+    <div class="profile-avatar">
+      <div class="profile-avatar-img">
+        <span class="mdi mdi-account-circle"></span>
+      </div>
+      <div class="profile-avatar-text">
+        <span class="avatar-text">Поменять<br>аватар</span>
+      </div>
+    </div>
+    <div class="avatar-name">Иван</div>
+    <div class="profile-items">
+      {{> profile/field/field label="Почта" value="pochta@yandex.ru"}}
+      {{> profile/field/field label="Логин" value="ivanivanov"}}
+      {{> profile/field/field label="Имя" value="Иван"}}
+      {{> profile/field/field label="Фамилия" value="Иванов"}}
+      {{> profile/field/field label="Имя в чате" value="Иван"}}
+      {{> profile/field/field label="Телефон" value="+7 (909) 967 30 30"}}
+    </div>
+    <div class="profile-items">
+      {{> profile/link/link src="/src/pages/profile/edit/edit.html" link="Изменить данные" color="blue" border="border-b"}}
+      {{> profile/link/link src="/src/pages/profile/change_password/change_password.html" link="Изменить пароль" color="blue" border="border-b"}}
+      {{> profile/link/link src="/src/pages/chat/chat.html" link="Выход" color="red"}}
+    </div>
+  </div>
+</div>
+{{/ layouts/page}}

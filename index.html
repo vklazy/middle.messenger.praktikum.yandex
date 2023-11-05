@@ -1,0 +1,19 @@
+{{#> layouts/page title="Авторизация"}}
+<div class="login-page">
+  {{#> layouts/card/card}}
+  <div class="form-title">Вход</div>
+  {{#> layouts/form/form form_class="form-login"}}
+  {{> input/input type="text" name="login" placeholder="Логин"}}
+  {{> input/input type="password" name="password" placeholder="Пароль"}}
+  <div class="form-buttons">
+    <a href="/src/pages/chat/chat.html">
+      {{> button/button label="Вход" button_type="button-blue button-text-white"}}
+    </a>
+    <a href="/src/pages/signup/signup.html">
+      {{> button/button label="Нет аккаунта?"  button_type="button-white button-text-blue"}}
+    </a>
+  </div>
+  {{/ layouts/form/form}}
+  {{/ layouts/card/card}}
+</div>
+{{/ layouts/page}}

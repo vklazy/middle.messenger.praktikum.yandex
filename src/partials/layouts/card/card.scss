@@ -1,0 +1,10 @@
+.card {
+  display: flex;
+  width: 280px;
+  flex-flow: column nowrap;
+  align-items: center;
+  box-shadow: 0 0 5px $color-shadow;
+  padding: 30px;
+  border: none;
+  border-radius: 12px;
+}
