@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const path = window.location.pathname;
   const getPage = () => {
     switch (path) {
+      case '/':
+        return Login;
       case '/login':
         return Login;
       case '/signup':
