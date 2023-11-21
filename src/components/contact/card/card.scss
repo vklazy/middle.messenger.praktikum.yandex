@@ -1,0 +1,66 @@
+@import "../../../assets/stylesheets/styles";
+
+.contact-card {
+  display: grid;
+  grid-template-columns: 15% 75% 10%;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid $color-light-grey;
+}
+
+.contact-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: $color-light-light-gray;
+}
+
+.contact-data {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-left: 0.5rem;
+}
+
+.contact-name {
+  font-weight: 500;
+  color: $color-almost-black;
+}
+
+.contact-message {
+  font-size: 0.8rem;
+  color: $color-grey;
+  font-weight: 400;
+}
+
+.contact-date {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-message-date {
+  display: flex;
+  font-size: 0.6rem;
+  color: $color-grey;
+  font-weight: 400;
+  justify-content: right;
+}
+
+.contact-message-new {
+  display: flex;
+  justify-content: right;
+}
+
+.contact-message-new-sum {
+  display: flex;
+  min-width: 20px;
+  height: 20px;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: $color-blue;
+  font-size: 0.8rem;
+  color: $color-white;
+}

@@ -1,0 +1,24 @@
+@import "../../assets/stylesheets/styles";
+
+.input-row {
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  margin-top: 15px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid $color-blue-transparent;
+
+  &:focus {
+    border-bottom-color: $color-blue;
+  }
+}
+
+.invalid-feedback {
+  display: none;
+  width: 100%;
+  font-size: 0.7rem;
+  color: $color-red;
+}
