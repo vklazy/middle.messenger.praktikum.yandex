@@ -1,8 +1,14 @@
+@import "../../assets/stylesheets/styles";
+
 .signup-page {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate3d(-50%, -50%, 0);
+}
+
+.form-signup {
+  width: 100%;
 }
 
 .form-title {
@@ -17,4 +23,15 @@
 .form-buttons {
   width: 100%;
   margin-top: 60px;
+}
+
+.card {
+  display: flex;
+  width: 280px;
+  flex-flow: column nowrap;
+  align-items: center;
+  box-shadow: 0 0 5px $color-shadow;
+  padding: 30px;
+  border: none;
+  border-radius: 12px;
 }
