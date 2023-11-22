@@ -3,12 +3,12 @@ interface profileInputAttributes {
 }
 
 export type profileInputProps = {
+  events: object;
   attributes: profileInputAttributes;
   label: string;
   type: string;
   name: string;
   placeholder: string;
   value: string;
-  validator?: any;
   feedback?: string;
 };

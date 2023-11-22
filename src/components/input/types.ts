@@ -3,12 +3,12 @@ interface inputAttributes {
 }
 
 export type inputProps = {
+  events: object;
   attributes: inputAttributes;
   class: string;
   type: string;
   name: string;
   placeholder: string;
   value: string;
-  validator?: any;
   feedback?: string;
 };
