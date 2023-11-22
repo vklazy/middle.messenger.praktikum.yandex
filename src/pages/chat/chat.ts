@@ -3,7 +3,6 @@ import { tpl } from './chat.tpl.ts';
 import { chatProps } from './types.ts';
 import { ContactCard } from '../../components/contact/card';
 import { DialogMessage } from '../../components/dialog/message';
-import { validateForm } from '../../utils/validation/validateData.ts';
 import './chat.scss';
 
 export default class ChatCompiler extends Block<chatProps> {
@@ -69,17 +68,29 @@ export default class ChatCompiler extends Block<chatProps> {
     });
   }
 
-  render() {
-    return this.compile(tpl, this._props);
-  }
-
-  _addListeners() {
-    const form = this.getContent()!.querySelector('.form-send-message');
-    if (form) {
-      form.addEventListener('submit', (event) => {
-        const fieldsToCheck = ['message'];
-        validateForm(event, fieldsToCheck);
+  _addEvents() {
+    let events: object = {};
+    if (this._props.events) {
+      events = this._props.events;
+      Object.keys(events).forEach((event) => {
+        this._element?.querySelector('.form-send-message')?.
+          addEventListener(event, events[event as keyof typeof events]);
       });
     }
+  }
+
+  _removeEvents() {
+    let events: object = {};
+    if (this._props.events) {
+      events = this._props.events;
+      Object.keys(events).forEach((event) => {
+        this._element?.querySelector('.form-send-message')?.
+          removeEventListener(event, events[event as keyof typeof events]);
+      });
+    }
+  }
+
+  render() {
+    return this.compile(tpl, this._props);
   }
 }

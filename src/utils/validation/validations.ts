@@ -1,10 +1,11 @@
+export type TCheckFunction = (value: string) => boolean;
 export const checkFirstName = (value: string): boolean => {
-  const regex = /^[A-Za-zА-Яа-я][A-Za-zА-Яа-я-]*$/;
+  const regex = /^[A-ZА-Я][A-Za-zА-Яа-я-]*$/;
   return regex.test(value);
 };
 
 export const checkSecondName = (value: string): boolean => {
-  const regex = /^[A-Za-zА-Яа-я][A-Za-zА-Яа-я-]*$/;
+  const regex = /^[A-ZА-Я][A-Za-zА-Яа-я-]*$/;
   return regex.test(value);
 };
 

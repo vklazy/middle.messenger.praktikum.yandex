@@ -8,21 +8,23 @@ export class ProfileInput extends Block<profileInputProps> {
     super(props, 'div');
   }
 
-  _addListeners() {
-    if (this._props.validator) {
-      const inputElement = this.element!.querySelector('input')! as HTMLInputElement;
-      const feedbackElement = this.element!.querySelector('span')! as HTMLSpanElement;
-      if (inputElement) {
-        inputElement.addEventListener('blur', (event: Event) => {
-          const target = event.target as HTMLInputElement;
-          const { validator } = this._props;
-          if (!validator(target!.value)) {
-            feedbackElement.style.display = 'block';
-          } else {
-            feedbackElement.style.display = 'none';
-          }
-        });
-      }
+  _addEvents() {
+    let events: object = {};
+    if (this._props.events) {
+      events = this._props.events;
+      Object.keys(events).forEach((event) => {
+        this._element?.querySelector('input')?.addEventListener(event, events[event as keyof typeof events]);
+      });
+    }
+  }
+
+  _removeEvents() {
+    let events: object = {};
+    if (this._props.events) {
+      events = this._props.events;
+      Object.keys(events).forEach((event) => {
+        this._element?.querySelector('input')?.removeEventListener(event, events[event as keyof typeof events]);
+      });
     }
   }
 

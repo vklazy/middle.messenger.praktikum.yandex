@@ -6,6 +6,7 @@ import {
   checkLogin,
   checkFirstName,
   checkSecondName,
+  TCheckFunction,
 } from './validations.ts';
 
 interface FormData {
@@ -22,6 +23,18 @@ interface FormData {
   newPassword?: string;
   confirmNewPassword?: string;
 }
+
+export const validateInput = (event: Event, validator: TCheckFunction) => {
+  const { target } = event;
+  if (target) {
+    const feedbackElement = (target as HTMLInputElement).parentElement!.querySelector('span') as HTMLSpanElement;
+    if (!validator((target as HTMLInputElement).value)) {
+      feedbackElement.style.display = 'block';
+    } else {
+      feedbackElement.style.display = 'none';
+    }
+  }
+};
 
 export const validateForm = (event: Event, fieldsToCheck: string[]) => {
   event.preventDefault();
@@ -94,6 +107,15 @@ export const validateForm = (event: Event, fieldsToCheck: string[]) => {
         }
         break;
 
+      case 'old_password':
+        const oldPasswordInput = document.getElementsByName('old_password')[0] as HTMLInputElement;
+        if (checkPassword(oldPasswordInput.value)) {
+          formData.oldPassword = oldPasswordInput.value;
+        } else {
+          invalidFields.push('old_password');
+        }
+        break;
+
       case 'confirm_password': {
         const passwordInput = document.getElementsByName(
           'password'
@@ -148,7 +170,6 @@ export const validateForm = (event: Event, fieldsToCheck: string[]) => {
         console.error('Invalid field specified for validation');
     }
   });
-
 
   if (invalidFields.length === 0) {
     console.log(formData);

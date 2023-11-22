@@ -3,7 +3,7 @@ import { tpl } from './edit.tpl.ts';
 import { profileEditProps } from './types.ts';
 import { ProfileInput } from '../../../components/profile/input';
 import { Button } from '../../../components/button';
-import { validateForm } from '../../../utils/validation/validateData.ts';
+import { validateInput } from '../../../utils/validation/validateData.ts';
 import * as validations from '../../../utils/validation/validations.ts';
 import './edit.scss';
 
@@ -14,6 +14,11 @@ export default class ProfileEditCompiler extends Block<profileEditProps> {
 
   init() {
     this._children.profileInputEmail = new ProfileInput({
+      events: {
+        blur: (event: Event) => {
+          validateInput(event, validations.checkEmail);
+        }
+      },
       attributes: {
         class: 'profile-input-field',
       },
@@ -22,11 +27,15 @@ export default class ProfileEditCompiler extends Block<profileEditProps> {
       name: 'email',
       placeholder: 'почта',
       value: 'pochta@yandex.ru',
-      validator: validations.checkEmail,
       feedback: 'Неверный адрес e-mail',
     });
 
     this._children.profileInputLogin = new ProfileInput({
+      events: {
+        blur: (event: Event) => {
+          validateInput(event, validations.checkLogin);
+        }
+      },
       attributes: {
         class: 'profile-input-field',
       },
@@ -35,7 +44,6 @@ export default class ProfileEditCompiler extends Block<profileEditProps> {
       name: 'login',
       placeholder: 'логин',
       value: 'ivanivanov',
-      validator: validations.checkLogin,
       feedback: `
 Должен быть от 3 до 20 символов, латиница, может содержать цифры,
 но не состоять из них, без пробелов, без спецсимволов (допустимы
@@ -43,6 +51,11 @@ export default class ProfileEditCompiler extends Block<profileEditProps> {
     });
 
     this._children.profileInputFirstName = new ProfileInput({
+      events: {
+        blur: (event: Event) => {
+          validateInput(event, validations.checkFirstName);
+        }
+      },
       attributes: {
         class: 'profile-input-field',
       },
@@ -51,13 +64,17 @@ export default class ProfileEditCompiler extends Block<profileEditProps> {
       name: 'first_name',
       placeholder: 'имя',
       value: 'Иван',
-      validator: validations.checkFirstName,
      feedback: `
 Латиница или кириллица, первая буква должна быть заглавной, без пробелов и без цифр,
 нет спецсимволов (допустим только дефис)`,
     });
 
     this._children.profileInputSecondName = new ProfileInput({
+      events: {
+        blur: (event: Event) => {
+          validateInput(event, validations.checkSecondName);
+        }
+      },
       attributes: {
         class: 'profile-input-field',
       },
@@ -66,13 +83,17 @@ export default class ProfileEditCompiler extends Block<profileEditProps> {
       name: 'second_name',
       placeholder: 'фамилия',
       value: 'Иванов',
-      validator: validations.checkSecondName,
       feedback: `
 Латиница или кириллица, первая буква должна быть заглавной, без пробелов и без цифр,
 нет спецсимволов (допустим только дефис)`,
     });
 
     this._children.profileInputDisplayName = new ProfileInput({
+      events: {
+        blur: (event: Event) => {
+          validateInput(event, validations.checkFirstName);
+        }
+      },
       attributes: {
         class: 'profile-input-field',
       },
@@ -81,13 +102,17 @@ export default class ProfileEditCompiler extends Block<profileEditProps> {
       name: 'display_name',
       placeholder: 'имя в чате',
       value: 'Иван',
-      validator: validations.checkFirstName,
       feedback: `
 Латиница или кириллица, первая буква должна быть заглавной, без пробелов и без цифр,
 нет спецсимволов (допустим только дефис)`,
     });
 
     this._children.profileInputPhone = new ProfileInput({
+      events: {
+        blur: (event: Event) => {
+          validateInput(event, validations.checkPhone);
+        }
+      },
       attributes: {
         class: 'profile-input-field',
       },
@@ -96,7 +121,6 @@ export default class ProfileEditCompiler extends Block<profileEditProps> {
       name: 'phone',
       placeholder: 'телефон',
       value: '+79099673030',
-      validator: validations.checkPhone,
       feedback: 'от 10 до 15 символов, состоит из цифр, может начинается с плюса',
     });
 
@@ -109,24 +133,29 @@ export default class ProfileEditCompiler extends Block<profileEditProps> {
     });
   }
 
-  render() {
-    return this.compile(tpl, this._props);
-  }
-
-  _addListeners() {
-    const form = this.getContent()!.querySelector('form');
-    if (form) {
-      form.addEventListener('submit', (event) => {
-        const fieldsToCheck = [
-          'email',
-          'login',
-          'first_name',
-          'second_name',
-          'display_name',
-          'phone',
-        ];
-        validateForm(event, fieldsToCheck);
+  _addEvents() {
+    let events: object = {};
+    if (this._props.events) {
+      events = this._props.events;
+      Object.keys(events).forEach((event) => {
+        this._element?.querySelector('.form-profile-edit')?.
+          addEventListener(event, events[event as keyof typeof events]);
       });
     }
+  }
+
+  _removeEvents() {
+    let events: object = {};
+    if (this._props.events) {
+      events = this._props.events;
+      Object.keys(events).forEach((event) => {
+        this._element?.querySelector('.form-profile-edit')?.
+          removeEventListener(event, events[event as keyof typeof events]);
+      });
+    }
+  }
+
+  render() {
+    return this.compile(tpl, this._props);
   }
 }

@@ -8,7 +8,8 @@
 }
 
 .profile-input-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   justify-content: space-between;
   width: 100%;
   align-items: center;
@@ -25,6 +26,7 @@
 
 .invalid-feedback {
   display: none;
+  grid-column: span 2;
   width: 100%;
   font-size: 0.7rem;
   color: $color-red;
