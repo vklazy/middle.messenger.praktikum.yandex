@@ -5,7 +5,11 @@
 
 `npm run dev` - запуск приложения в режиме разработки.
 
- `npm run build` - сборка приложения в папку `dist`.
+`npm run build` - сборка приложения в папку `dist`.
+
+`npm run start` - сборка приложения и запуск (localhost:3000).
+
+`npm run lint` - запуск eslint и stylelint.
 
 ---
 В дизайне ориентировался на предоставленный макет в курсе:
@@ -22,11 +26,11 @@
 
 ### Сверстанные страницы
 
-- [Авторизация](https://inspiring-malabi-a631a5.netlify.app/)
-- [Регистрация](https://inspiring-malabi-a631a5.netlify.app/src/pages/signup/signup)
-- [Чат](https://inspiring-malabi-a631a5.netlify.app/src/pages/chat/chat)
-- [Профиль](https://inspiring-malabi-a631a5.netlify.app/src/pages/profile/view/view)
-- [Редактирование профиля](https://inspiring-malabi-a631a5.netlify.app/src/pages/profile/edit/edit)
-- [Изменение пароля](https://inspiring-malabi-a631a5.netlify.app/src/pages/profile/change_password/change_password)
-- [Страница 404](https://inspiring-malabi-a631a5.netlify.app/src/pages/errors/404)
-- [Страница 500](https://inspiring-malabi-a631a5.netlify.app/src/pages/errors/500)
+- [Авторизация](https://inspiring-malabi-a631a5.netlify.app/login)
+- [Регистрация](https://inspiring-malabi-a631a5.netlify.app/signup)
+- [Чат](https://inspiring-malabi-a631a5.netlify.app/chat)
+- [Профиль](https://inspiring-malabi-a631a5.netlify.app/profile_view)
+- [Редактирование профиля](https://inspiring-malabi-a631a5.netlify.app/profile_edit)
+- [Изменение пароля](https://inspiring-malabi-a631a5.netlify.app/change_password)
+- [Страница 404](https://inspiring-malabi-a631a5.netlify.app/404)
+- [Страница 500](https://inspiring-malabi-a631a5.netlify.app/500)

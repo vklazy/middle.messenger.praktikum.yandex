@@ -1,0 +1,33 @@
+@import "../../../assets/stylesheets/styles";
+
+.profile-input-field {
+  width: 100%;
+  display: grid;
+  border-bottom: 1px solid $color-light-grey;
+  padding: 1rem 0;
+}
+
+.profile-input-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.input-field {
+  text-align: end;
+  width: auto;
+  color: $color-grey;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.invalid-feedback {
+  display: none;
+  grid-column: span 2;
+  width: 100%;
+  font-size: 0.7rem;
+  color: $color-red;
+}
